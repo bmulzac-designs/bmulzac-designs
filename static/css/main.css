@@ -1,0 +1,159 @@
+body {
+  margin: 0px;
+  padding: 0;
+  font-family: sans-serif;
+  color: #444;
+  background-color: rgb(238, 238, 238);
+  font-size: 18px;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ============================================================ */
+/* container */
+/* ============================================================ */
+.container {
+  display: grid;
+  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-rows: 10vh 1fr;
+  grid-template-areas:
+    "h n n"
+    "c c c";
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 5vh 5vh 1fr;
+    grid-template-areas:
+      "h h h"
+      "n n n"
+      "c c c";
+  }
+}
+
+/* ============================================================ */
+/* header */
+/* ============================================================ */
+
+#main-header {
+  grid-area: h;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* ============================================================ */
+/* main navigation */
+/* ============================================================ */
+#main-nav {
+  grid-area: n;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+}
+
+#main-nav ul li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+#main-nav ul a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ======================================================================== */
+/* Homepage
+/* ======================================================================== */
+
+.homeContainer .homeContent {
+  grid-area: c;
+  min-height: 90vh;
+  background: url(../media/mulzac2.jpg) no-repeat center top;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 300px 300px 100px 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.homeContent .wrapper {
+    background-color: #000000ad;
+    padding: 20px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .homeContainer .homeContent {
+    justify-content: flex-start;
+    padding: 20vh 5vw 0 5vw;
+  }
+}
+
+.homeContainer .homeCover {
+  grid-area: c;
+  overflow: hidden;
+}
+
+.homeCover img {
+  transform: scaleX(-1);
+}
+
+/* ======================================================================== */
+/* Single Pages */
+/* ======================================================================== */
+.singleContainer img {
+  max-width: 100%;
+}
+
+.singleContainer .singleContent {
+  grid-area: c;
+  overflow: hidden;
+}
+
+/* ======================================================================== */
+/* Product Pages */
+/* ======================================================================== */
+.procuctContainer .procuctContent {
+  grid-area: c;
+  overflow: hidden;
+}
+
+.productImages {
+  display: flex;
+}
+
+.productImage {
+  margin: 1vw;
+}
+
+/* ======================================================================== */
+/* List Pages */
+/* ======================================================================== */
+.listContainer .listContent {
+  grid-area: c;
+  overflow: hidden;
+}

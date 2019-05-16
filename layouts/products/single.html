@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Product &mdash; {{.Title}}</title>
+  {{ partial "head" }}
+</head>
+
+<body class="product {{.Title}}">
+  <div class="container procuctContainer">
+    {{ partial "header" }}
+    <div class="procuctContent">
+
+      <div class="productImages">
+        {{ with .Resources.ByType "image" }}
+          {{ range . }}
+          <div class="productImage">
+            {{ $image := .Resize "500x" }}
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ $image.RelPermalink}}">
+            </a>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      <div class="productDetails">
+        {{ .Content }}
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

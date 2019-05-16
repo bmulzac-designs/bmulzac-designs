@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Products List</title>
+    {{ partial "head" }}
+  </head>
+
+  <body>
+
+    <div class="listContainer">
+    {{ partial "header" }}
+
+    <div class="listContent">
+    {{ .Content }}
+
+    <div class="productsList">
+      <ul>
+        {{ range.Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
