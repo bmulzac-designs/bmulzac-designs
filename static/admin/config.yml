@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: bmulzac-designs/bmulzac-designs.github.io
+  branch: master
+  site_domain: https://affectionate-hopper-3ad4c0.netlify.com/
+
+publish_mode: editorial_workflow
+media_folder: "static/media/images/uploads"
+public_folder: "/media/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
