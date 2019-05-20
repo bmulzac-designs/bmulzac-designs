@@ -1,11 +1,11 @@
 backend:
   name: github
-  repo: bmulzac-designs/bmulzac-designs.github.io
+  repo: bmulzac-designs/bmulzac-designs
   branch: master
   site_domain: affectionate-hopper-3ad4c0.netlify.com
 
 publish_mode: editorial_workflow
-media_folder: "static/media/images/uploads"
+media_folder: "static/media/images/uploads
 public_folder: "/media/images/uploads"
 
 collections:
