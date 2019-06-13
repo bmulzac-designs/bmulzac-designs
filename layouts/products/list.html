@@ -21,6 +21,7 @@
         {{ range.Pages }}
         <li>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <img alt="{{.Title}} Thumbnail" src="{{ .RelPermalink }}/images/thumb.JPG"/>
         </li>
         {{ end }}
       </ul>
